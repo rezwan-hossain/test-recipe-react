@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import RecipeList from "./component/RecipeList";
 
 function App() {
 
   return (
     <div>
-      
+      <RecipeList />
+       <RecipeList />
     </div>
   );
 }
