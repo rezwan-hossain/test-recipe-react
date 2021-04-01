@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import IngredienList from './IngredienList'
 
+import { RecipeContex } from "../App.js";
+
 export default function Recipe(props) {
+	const { handleRecipeDelete } = useContext(RecipeContex);
 	return (
 		<div>
 			<div>
 				<h3>{props.name}</h3>
 				<div>
 					<button>edit</button>
-					<button onClick={() => props.handleRecipeDelete(props.id)}>delete</button>
+					<button onClick={() => handleRecipeDelete(props.id)}>delete</button>
 				</div>
 			</div>
 			<div>
