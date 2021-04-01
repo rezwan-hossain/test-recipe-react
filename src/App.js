@@ -25,9 +25,17 @@ function App() {
 
     setRecipes([...recipes, newRecipe]);
   }
+
+  function handleRecipeDelete(id) {
+    setRecipes(recipes.filter((recipe) => recipe.id !== id));
+  }
   return (
     <div>
-      <RecipeList recipes={recipes} handleRecipeAdd={handleRecipeAdd} />
+      <RecipeList
+        recipes={recipes}
+        handleRecipeAdd={handleRecipeAdd}
+        handleRecipeDelete={handleRecipeDelete}
+      />
     </div>
   );
 }

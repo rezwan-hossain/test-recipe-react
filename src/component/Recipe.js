@@ -8,7 +8,7 @@ export default function Recipe(props) {
 				<h3>{props.name}</h3>
 				<div>
 					<button>edit</button>
-					<button>delete</button>
+					<button onClick={() => props.handleRecipeDelete(props.id)}>delete</button>
 				</div>
 			</div>
 			<div>
